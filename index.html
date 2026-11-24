@@ -10,20 +10,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ParkingFacility",
-  "name": "Estacionamento Central Park Angra",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Rua Coronel Carvalho, 470 - Centro",
-    "addressLocality": "Angra dos Reis",
-    "addressRegion": "RJ",
-    "addressCountry": "BR"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "ParkingFacility",
+    "name": "Estacionamento Central Park Angra — Unidade Coronel Carvalho",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Coronel Carvalho, 470 - Centro",
+      "addressLocality": "Angra dos Reis",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
   },
-  "openingHours": "Mo-Su 00:00-24:00",
-  "priceRange": "R$5 - R$70"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "ParkingFacility",
+    "name": "Estacionamento Central Park Angra — Unidade Honório Lima",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Honório Lima, 169 - Centro",
+      "addressLocality": "Angra dos Reis",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    }
+  }
+]
 </script>
 
 <style>
@@ -173,41 +185,11 @@ section{padding:5.5rem 0}
 .step h3{font-size:1.15rem;margin-bottom:.5rem}
 .step p{font-size:.94rem;max-width:280px;margin:0 auto}
 
-/* ============ TARIFAS / CALCULADORA ============ */
-#tarifas{background:linear-gradient(180deg,var(--paper),#e8eff6)}
-.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-bottom:3rem}
-.plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem 1.4rem;text-align:center;transition:transform .3s,box-shadow .3s;position:relative}
-.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.plan.featured{border:2px solid var(--gold)}
-.plan .tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy-2);font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .8rem;border-radius:999px;white-space:nowrap}
-.plan h3{font-size:1rem;letter-spacing:.06em}
-.plan .price{font-family:var(--font-display);font-size:2.1rem;color:var(--navy);margin:.5rem 0 .1rem}
-.plan .price small{font-size:.85rem;font-family:var(--font-body);font-weight:700;color:var(--text)}
-.plan .per{font-size:.8rem;color:var(--text)}
-.plan ul{margin-top:1rem;font-size:.85rem;display:grid;gap:.4rem}
-.plan ul li::before{content:"✓ ";color:var(--sea);font-weight:800}
-
-.calc{background:var(--navy);border-radius:26px;color:#fff;padding:2.8rem;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.calc::before{content:"P";position:absolute;right:-40px;bottom:-90px;font-family:var(--font-display);font-size:22rem;font-weight:700;color:rgba(255,255,255,.05);line-height:1}
-.calc h3{color:#fff;font-size:clamp(1.3rem,2.4vw,1.7rem);margin-bottom:.4rem}
-.calc p.sub{color:#bcd2e8;font-size:.95rem;margin-bottom:1.6rem}
-.calc label{display:block;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:1.1rem 0 .45rem}
-.calc select,.calc input{width:100%;padding:.85rem 1rem;border-radius:12px;border:none;background:#fff;color:var(--navy-2);font-family:inherit;font-weight:700;font-size:.95rem;outline:3px solid transparent;transition:outline .2s}
-.calc select:focus,.calc input:focus{outline:3px solid var(--gold)}
-.pill-group{display:flex;gap:.6rem}
-.pill-group input{display:none}
-.pill-group label{flex:1;text-align:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:.75rem;border-radius:12px;margin:0;cursor:pointer;color:#fff;letter-spacing:.06em;transition:.25s}
-.pill-group input:checked + label{background:var(--gold);color:var(--navy-2);border-color:var(--gold)}
-.calc-summary{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:2rem;display:flex;flex-direction:column;justify-content:center;gap:.4rem;position:relative;z-index:1}
-.calc-summary .total-label{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:#bcd2e8;font-weight:800}
-.calc-summary .total{font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.2rem);color:var(--gold);line-height:1}
-.calc-summary .discount{font-size:.85rem;color:#8fe3b0;font-weight:700;min-height:1.3em}
-.calc-summary .btn{margin-top:1.2rem;width:100%}
-.calc-note{font-size:.78rem;color:#9db8d2;margin-top:.8rem;text-align:center}
-
 /* ============ LOCALIZAÇÃO ============ */
 .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
-.map-wrap{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:420px}
+.maps{display:grid;gap:1.4rem}
+.map-label{font-weight:800;color:var(--navy);font-size:.95rem;margin-bottom:.55rem}
+.map-wrap{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:300px}
 .map-wrap iframe{width:100%;height:100%;border:0}
 .dist-list{display:grid;gap:1rem;margin-top:1.8rem}
 .dist-item{display:flex;align-items:center;gap:1rem;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.9rem 1.2rem;transition:transform .25s}
@@ -283,8 +265,6 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
 @media(max-width:1000px){
   .hero .container{grid-template-columns:1fr;gap:4rem}
   .benefits-grid{grid-template-columns:repeat(2,1fr)}
-  .plans{grid-template-columns:repeat(2,1fr)}
-  .calc{grid-template-columns:1fr;padding:2.2rem}
   .loc-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr 1fr}
   .stats .grid{grid-template-columns:repeat(2,1fr)}
@@ -298,7 +278,6 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
   .steps{grid-template-columns:1fr;gap:2.6rem}
   .steps::before{display:none}
   .benefits-grid{grid-template-columns:1fr}
-  .plans{grid-template-columns:1fr}
   .slide{padding:2.2rem 1.4rem}
   .chip-1{left:0}.chip-2{right:0}
   .footer-grid{grid-template-columns:1fr}
@@ -372,7 +351,7 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
 <!-- ====== TOPBAR ====== -->
 <div class="topbar">
   <div class="container">
-    <span>📍 Rua Coronel Carvalho, 470 – Centro, Angra dos Reis/RJ</span>
+    <span>📍 Rua Coronel Carvalho, 470 e Rua Honório Lima, 169 – Centro, Angra dos Reis/RJ</span>
     <span><strong><a href="https://instagram.com/centralparkangra">@centralparkangra</a></strong> · 📞 <strong>(24) 99867-1006</strong></span> <!-- TROQUE O NÚMERO -->
   </div>
 </div>
@@ -390,7 +369,6 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#beneficios">Benefícios</a>
-      <a href="#tarifas">Tarifas</a>
       <a href="#localizacao">Localização</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#faq">Dúvidas</a>
@@ -413,7 +391,7 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
         <a class="btn btn-wa" href="https://wa.me/5524998671006?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20di%C3%A1ria." target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><use href="#i-wa"/></svg> Reservar pelo WhatsApp
         </a>
-        <a class="btn btn-ghost" href="#tarifas">Ver tarifas</a>
+        <a class="btn btn-ghost" href="#localizacao">Ver endereços</a>
       </div>
       <ul class="hero-trust">
         <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg> Monitoramento 24h</li>
@@ -494,64 +472,6 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
   </div>
 </section>
 
-<!-- ====== TARIFAS + CALCULADORA ====== -->
-<section id="tarifas">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="overline">Tarifas transparentes</span>
-      <h2 class="section-title">Quanto custa deixar seu carro?</h2>
-      <p class="section-sub">Valores por hora e diária. Para períodos longos (viagens às ilhas), quanto mais dias, mais você economiza.</p>
-    </div>
-
-    <div class="plans">
-      <div class="plan reveal"><h3>ROTATIVO</h3><div class="price">R$ 10<small>/hora</small></div><ul><li>Vaga coberta</li><li>Veículo segurado</li><li>Monitoramento 24h</li></ul></div>
-      <div class="plan featured reveal"><span class="tag">Mais procurado</span><h3>DIÁRIA</h3><div class="price">R$ 60<small>/dia</small></div><ul><li>Vaga coberta</li><li>Veículo segurado</li><li>Monitoramento 24h</li></ul></div>
-      <div class="plan reveal"><h3>FINAL DE SEMANA</h3><div class="price">R$ 100<small>Sáb/Dom</small></div><ul><li>Vaga coberta</li><li>Veículo segurado</li><li>Monitoramento 24h</li></ul></div>
-      <div class="plan reveal"><h3>PERNOITE</h3><div class="price">R$ 35<small>/noite</small></div><ul><li>Vaga coberta</li><li>Veículo segurado</li><li>Monitoramento 24h</li></ul></div>
-    </div>
-<!-- --
-    <div class="calc reveal" id="calculadora">
-      <div>
-        <h3>Calcule sua estadia</h3>
-        <p class="sub">Simule o valor e envie o pedido pronto pelo WhatsApp.</p>
-
-        <label for="calcVehicle">Tipo de veículo</label>
-        <select id="calcVehicle">
-          <option value="moto">Moto</option>
-          <option value="carro" selected>Carro de passeio</option>
-          <option value="suv">SUV / Utilitário</option>
-          <option value="van">Van / Pick-up</option>
-        </select>
-
-        <label>Período</label>
-        <div class="pill-group">
-          <input type="radio" name="periodo" id="pHora" value="hour">
-          <label for="pHora">Por hora</label>
-          <input type="radio" name="periodo" id="pDia" value="day" checked>
-          <label for="pDia">Por diária</label>
-        </div>
-
-        <label for="calcQty" id="qtyLabel">Quantidade de diárias</label>
-        <input type="number" id="calcQty" min="1" max="60" value="3">
-
-        <label for="calcDate">Data de chegada</label>
-        <input type="date" id="calcDate">
-      </div>
-
-      <div class="calc-summary">
-        <span class="total-label">Total estimado</span>
-        <span class="total" id="calcTotal">R$ 120</span>
-        <span class="discount" id="calcDiscount"></span>
-        <!-- Link atualizado via JS
-        <a class="btn btn-wa" id="calcWa" href="#" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><use href="#i-wa"/></svg> Reservar este valor
-        </a>
-        <p class="calc-note">* Valores estimados, sujeitos a confirmação. Em diárias ≥ 7 dias: 10% OFF.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ====== LOCALIZAÇÃO ====== -->
 <section id="localizacao">
   <div class="container">
@@ -560,19 +480,31 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
       <h2 class="section-title">No centro de tudo em Angra</h2>
     </div>
     <div class="loc-grid">
-      <div class="map-wrap reveal">
-        <iframe title="Mapa — Estacionamento Central Park Angra" loading="lazy"
-          src="https://www.google.com/maps?q=Rua%20Coronel%20Carvalho%2C%20470%20-%20Centro%2C%20Angra%20dos%20Reis%20-%20RJ&output=embed"></iframe>
+      <div class="maps reveal">
+        <div class="map-card">
+          <div class="map-label">📍 Unidade Coronel Carvalho</div>
+          <div class="map-wrap">
+            <iframe title="Mapa — Central Park Angra, Rua Coronel Carvalho, 470" loading="lazy"
+              src="https://www.google.com/maps?q=Rua%20Coronel%20Carvalho%2C%20470%20-%20Centro%2C%20Angra%20dos%20Reis%20-%20RJ&output=embed"></iframe>
+          </div>
+        </div>
+        <div class="map-card">
+          <div class="map-label">📍 Unidade Honório Lima</div>
+          <div class="map-wrap">
+            <iframe title="Mapa — Central Park Angra, Rua Honório Lima, 169" loading="lazy"
+              src="https://www.google.com/maps?q=Rua%20Hon%C3%B3rio%20Lima%2C%20169%20-%20Centro%2C%20Angra%20dos%20Reis%20-%20RJ&output=embed"></iframe>
+          </div>
+        </div>
       </div>
       <div class="reveal">
-        <p class="section-sub">Ponto estratégico no Centro: você estaciona e resolve tudo a pé ou em poucos minutos — embarque, restaurantes e comércio.</p>
+        <p class="section-sub">Duas unidades no Centro: você estaciona e resolve tudo a pé ou em poucos minutos — embarque, restaurantes e comércio.</p>
         <div class="dist-list">
           <div class="dist-item"><span class="ico">⛴️</span><span><b>Cais Santa Luzia</b><small>embarque para Ilha Grande e outras ilhas</small></span><span class="time">~5 min caminhando</span></div>
           <div class="dist-item"><span class="ico">🎣</span><span><b>Cais dos Pescadores</b><small>passeios de barco e escunas</small></span><span class="time">~5 min caminhando</span></div>
           <div class="dist-item"><span class="ico">🚢</span><span><b>Barcas CCR</b><small>estação de embarque</small></span><span class="time">~5 min caminhando</span></div>
           <div class="dist-item"><span class="ico">🛍️</span><span><b>Comércio & restaurantes</b><small>Centro histórico</small></span><span class="time">~1 min caminhando</span></div>
         </div>
-        <div class="loc-address">📍<span><b>Endereço:</b> Rua Coronel Carvalho, 470 – Centro, Angra dos Reis – RJ<br><b>Referência:</b> coração do Centro, com fácil acesso pela Av. Júlio Maria.</span></div>
+        <div class="loc-address">📍<span><b>Unidade Coronel Carvalho:</b> Rua Coronel Carvalho, 470 – Centro, Angra dos Reis – RJ<br><b>Unidade Honório Lima:</b> Rua Honório Lima, 169 – Centro, Angra dos Reis – RJ<br><b>Referência:</b> coração do Centro, com fácil acesso pela Av. Júlio Maria.</span></div>
       </div>
     </div>
   </div>
@@ -614,7 +546,7 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
       <div class="faq-item"><button class="faq-q">Quais formas de pagamento vocês aceitam?<span class="icon">+</span></button><div class="faq-a"><p>Aceitamos Dinheiro, PIX, cartão de débito e cartão de crédito. O pagamento pode ser feito na entrada ou na saída, como preferir.</p></div></div>
       <div class="faq-item"><button class="faq-q">O estacionamento é coberto e seguro?<span class="icon">+</span></button><div class="faq-a"><p>Contamos com área coberta, mais de 05 câmeras de monitoramento 24h e parceria com seguradora para proteção completa do seu veículo.</p></div></div>
       <div class="faq-item"><button class="faq-q">Funciona em que horário?<span class="icon">+</span></button><div class="faq-a"><p>Segunda à Sexta das 07:30 às 19:00; Sábado das 08:00 às 14:00 e Domingo: Remoto  — perfeito para quem pega barcas cedo ou retorna de passeio à noite.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Como faço para chegar até vocês?<span class="icon">+</span></button><div class="faq-a"><p>Estamos na Rua Coronel Carvalho, 470 – Centro. Use o mapa da seção "Localização" ou chame no WhatsApp que enviamos a rota pronta para o seu GPS.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Como faço para chegar até vocês?<span class="icon">+</span></button><div class="faq-a"><p>Temos duas unidades no Centro: Rua Coronel Carvalho, 470 e Rua Honório Lima, 169. Use o mapa da seção "Localização" ou chame no WhatsApp que enviamos a rota pronta para o seu GPS.</p></div></div>
     </div>
   </div>
 </section>
@@ -649,6 +581,7 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
         <ul>
           <li>📞 (24) 99867-1006</li> <!-- TROQUE O NÚMERO -->
           <li>📍 Rua Coronel Carvalho, 470<br>&nbsp;&nbsp;&nbsp;&nbsp;Centro – Angra dos Reis/RJ</li>
+          <li>📍 Rua Honório Lima, 169<br>&nbsp;&nbsp;&nbsp;&nbsp;Centro – Angra dos Reis/RJ</li>
 
         </ul>
       </div>
@@ -664,7 +597,6 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
         <h4>Navegação</h4>
         <ul>
           <li><a href="#beneficios">Benefícios</a></li>
-          <li><a href="#tarifas">Tarifas</a></li>
           <li><a href="#localizacao">Localização</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#faq">Dúvidas</a></li>
@@ -687,13 +619,6 @@ footer{background:var(--navy-2);color:#a9c0d8;padding:4rem 0 0;font-size:.92rem}
 
 <script>
 /* ================== CONFIG ================== */
-const WHATS = "5524998671006"; // ◄ TROQUE AQUI (só dígitos, com DDI 55)
-const PRICES = {
-  moto:  { label:"Moto",            hour:5,  day:25 },
-  carro: { label:"Carro de passeio",hour:8,  day:40 },
-  suv:   { label:"SUV / Utilitário",hour:10, day:50 },
-  van:   { label:"Van / Pick-up",   hour:14, day:70 }
-};
 
 /* ================== HEADER / MENU ================== */
 const header = document.getElementById("header");
@@ -761,34 +686,6 @@ document.querySelectorAll(".faq-item").forEach(item => {
     a.style.maxHeight = open ? a.scrollHeight + "px" : 0;
   });
 });
-
-/* ================== CALCULADORA ================== */
-const vSel = document.getElementById("calcVehicle");
-const qty  = document.getElementById("calcQty");
-const date = document.getElementById("calcDate");
-const rH   = document.getElementById("pHora");
-const rD   = document.getElementById("pDia");
-const totalEl = document.getElementById("calcTotal");
-const discEl  = document.getElementById("calcDiscount");
-const waEl    = document.getElementById("calcWa");
-const qtyLbl  = document.getElementById("qtyLabel");
-
-function calc(){
-  const p = PRICES[vSel.value];
-  const period = rH.checked ? "hour" : "day";
-  const q = Math.max(1, Math.min(60, parseInt(qty.value)||1));
-  qtyLbl.textContent = period === "day" ? "Quantidade de diárias" : "Quantidade de horas";
-  let total = p[period] * q, disc = "";
-  if (period === "day" && q >= 7){ total *= .9; disc = "🎉 10% de desconto aplicado (7+ diárias)!"; }
-  totalEl.textContent = total.toLocaleString("pt-BR",{style:"currency",currency:"BRL",minimumFractionDigits:0});
-  discEl.textContent = disc;
-  const unit = period === "day" ? "diária(s)" : "hora(s)";
-  const dTxt = date.value ? " em " + date.value.split("-").reverse().join("/") : "";
-  const msg = `Olá! Quero reservar no Central Park Angra: ${p.label}, ${q} ${unit}${dTxt}. Total estimado: R$ ${total.toLocaleString("pt-BR")}.`;
-  waEl.href = `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
-}
-[vSel, qty, date, rH, rD].forEach(el => el.addEventListener("input", calc));
-calc();
 
 /* ================== DIVERSOS ================== */
 document.getElementById("year").textContent = new Date().getFullYear();
